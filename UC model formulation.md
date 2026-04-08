@@ -1,3 +1,5 @@
+GitHub does not reliably render LaTeX-style equations in Markdown. For the fully rendered version, use [UC model formulation.pdf](./UC%20model%20formulation.pdf).
+
 ## Appendix A. Generator-Level Unit Commitment Formulation
 
 This appendix presents the exact mathematical structure of the final generator-level unit commitment (UC) model used in the project. The model is solved on a rolling horizon and co-optimizes generator dispatch, thermal commitment decisions, renewable allocation, and battery storage operation.
