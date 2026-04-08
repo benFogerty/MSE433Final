@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-04-07T12:19:58",
+  "publication_window_start": "2026-03-09",
+  "publication_window_end": "2026-04-07",
+  "snapshots_kept": 706,
+  "rows_written": 710595,
+  "fuel_types": [
+    "Solar",
+    "Wind"
+  ],
+  "zones": [
+    "BRUCE",
+    "EAST",
+    "ESSA",
+    "NORTHEAST",
+    "NORTHWEST",
+    "OTTAWA",
+    "OntarioTotal",
+    "SOUTHWEST",
+    "TORONTO",
+    "WEST"
+  ],
+  "publication_hours_observed": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "hours_ahead_min": 1,
+  "hours_ahead_max": 48
+}

@@ -1,0 +1,42 @@
+{
+  "overlap_start": "2025-04-08 08:00:00",
+  "overlap_end": "2025-04-15 07:00:00",
+  "blocks_solved": 1,
+  "horizon_hours": 168,
+  "historical_baseline_scenario": {
+    "name": "current_ontario_storage",
+    "label": "Current observed storage fleet in source files",
+    "power_mw": 1129.0,
+    "energy_mwh": 4516.0
+  },
+  "optimization_scenario": {
+    "name": "current_ontario_storage",
+    "label": "Current observed storage fleet in source files",
+    "power_mw": 1129.0,
+    "energy_mwh": 4516.0
+  },
+  "initial_state_summary": {
+    "units_on_prior_hour": 76,
+    "units_off_prior_hour": 53
+  },
+  "policies": [
+    "historical_actual",
+    "ieso_forecast_uc",
+    "forecast_informed_uc"
+  ],
+  "time_limit_per_day_seconds": 120.0,
+  "mip_rel_gap": 0.01,
+  "continuous_ramp_multiplier": 2.0,
+  "diagnose_ramping": false,
+  "ramp_slack_penalty": 100000.0,
+  "notes": [
+    "Generator-level UC experiment solved as a rolling MILP over configurable block horizons.",
+    "Gas and biofuel units are binary UC units; hydro and nuclear are continuous dispatch units.",
+    "The model includes generator dispatch, commitment, startup/shutdown, ramping, minimum up/down, battery SOC, and hourly system power balance.",
+    "Minimum up/down carryover across the first modeled day is approximated from recent actual operating history.",
+    "historical_actual always uses the observed current storage fleet from source files.",
+    "Optimization policies can optionally override storage power and energy for case-study analysis.",
+    "Ramping enabled: True. Minimum up/down enabled: True.",
+    "Continuous HYDRO/NUCLEAR ramp multiplier: 2.0."
+  ]
+}

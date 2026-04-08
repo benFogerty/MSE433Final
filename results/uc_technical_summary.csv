@@ -1,0 +1,7 @@
+metric,value
+Rolling UC blocks solved,39
+Mean solve time per block,6.31 s
+Max solve time per block,36.08 s
+Mean MIP gap,0.031%
+Max MIP gap,0.499%
+Total ramp slack used,0.00 MW

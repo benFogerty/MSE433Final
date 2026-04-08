@@ -1,0 +1,5 @@
+recommendation,quantified_result
+Dispatch storage with the 168-hour forecast-informed generator UC policy,Battery utilization rises from 5.99% to 13.61%.
+Use storage as renewable-backed peak support rather than keeping it underutilized,Mean battery output increases from 27.70 MW to 153.65 MW.
+"Expect the main benefit to come from storage utilization, not extra renewable capture","Renewable utilization stays at 100% in this window, while peak non-renewable requirement still falls by 654.00 MW."
+Track gas displacement as the clearest flexible-generation impact metric,"Modeled gas generation falls by 19,271,911 MWh relative to the historical baseline, or 3000.45 MW on an average hour."

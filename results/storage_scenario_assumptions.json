@@ -1,0 +1,8 @@
+{
+  "current_ontario_storage": {
+    "label": "Current observed storage fleet in source files",
+    "power_mw": 1129.0,
+    "energy_mwh": 4516.0,
+    "source_note": "Main optimization uses the generator-level UC run published from results/generator_uc/full_run_168h with a 168-hour rolling horizon."
+  }
+}

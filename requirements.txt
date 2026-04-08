@@ -1,0 +1,6 @@
+pandas>=2.2
+scikit-learn>=1.5
+matplotlib>=3.9
+seaborn>=0.13
+openpyxl>=3.1
+tabulate>=0.9

@@ -1,0 +1,30 @@
+{
+  "main_reference_run": "full_run_168h",
+  "horizon_hours_tested": [
+    24,
+    72,
+    168
+  ],
+  "storage_cases_tested": [
+    {
+      "label": "Current observed fleet",
+      "power_mw": 1129.0,
+      "energy_mwh": 4516.0
+    },
+    {
+      "label": "1500 MW / 4h",
+      "power_mw": 1500.0,
+      "energy_mwh": 6000.0
+    },
+    {
+      "label": "2000 MW / 4h",
+      "power_mw": 2000.0,
+      "energy_mwh": 8000.0
+    },
+    {
+      "label": "3000 MW / 4h",
+      "power_mw": 3000.0,
+      "energy_mwh": 12000.0
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "generated_at": "2026-04-07T12:19:58",
+  "source_index": "https://reports-public.ieso.ca/public/VGForecastSummary/",
+  "window_days": 30,
+  "publication_window_start": "2026-03-09",
+  "publication_window_end": "2026-04-07",
+  "snapshots_kept": 706,
+  "rows_written": 710595,
+  "output_csv": "VGForecastSummary_latest_hourly_30d.csv"
+}

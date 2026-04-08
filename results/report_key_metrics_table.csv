@@ -1,0 +1,9 @@
+metric,historical_actual,forecast_informed_uc,improvement
+Battery power utilization,5.99%,13.61%,7.62 percentage points
+Mean battery output,27.70 MW,153.65 MW,125.95 MW
+Battery throughput utilization,14.72%,81.66%,66.94 percentage points
+Total battery discharge,"177,900 MWh","986,903 MWh","809,003 MWh"
+Gas generation saved,0 MWh,"19,271,911 MWh",3000.45 MW average
+Gas peak reduction,0 MW,1619 MW,1619 MW
+Modeled operating cost,"$319,638,428","$159,923,631","$159,714,797 saved"
+Peak non-renewable reduction,0 MW,654 MW,654 MW

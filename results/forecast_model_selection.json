@@ -1,0 +1,52 @@
+{
+  "wind": {
+    "fuel": "Wind",
+    "best_ml_method": "gradient_boosted",
+    "gradient_boosting_selection": {
+      "fuel": "Wind",
+      "model": "gradient_boosted",
+      "validation_rmse_mw": 86.2788405563723,
+      "params": {
+        "learning_rate": 0.03,
+        "max_depth": 6,
+        "max_iter": 500,
+        "min_samples_leaf": 25
+      }
+    },
+    "candidate_validation_rmse": [
+      {
+        "method": "linear_residual",
+        "validation_rmse_mw": 103.32099865883801
+      },
+      {
+        "method": "gradient_boosted",
+        "validation_rmse_mw": 86.2788405563723
+      }
+    ]
+  },
+  "solar": {
+    "fuel": "Solar",
+    "best_ml_method": "gradient_boosted",
+    "gradient_boosting_selection": {
+      "fuel": "Solar",
+      "model": "gradient_boosted",
+      "validation_rmse_mw": 6.710734711931224,
+      "params": {
+        "learning_rate": 0.03,
+        "max_depth": 6,
+        "max_iter": 500,
+        "min_samples_leaf": 25
+      }
+    },
+    "candidate_validation_rmse": [
+      {
+        "method": "linear_residual",
+        "validation_rmse_mw": 7.00515866471325
+      },
+      {
+        "method": "gradient_boosted",
+        "validation_rmse_mw": 6.710734711931224
+      }
+    ]
+  }
+}
