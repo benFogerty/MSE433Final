@@ -33,8 +33,8 @@ Interpretation: the gain comes from **better storage dispatch**, not from recove
 2. Train and evaluate renewable forecasting models.
 3. Solve the main rolling 168-hour generator-level UC with storage.
 4. Run horizon and storage sensitivity checks.
-5. Publish the canonical UC results into the root `results/` directory.
-6. Render the final report.
+5. Build a decision-support layer from the precomputed UC outputs.
+6. Review the outputs in the Streamlit dashboard.
 
 ## Main Optimization Model
 
@@ -90,6 +90,7 @@ This final structure is designed to map directly to the course rubric:
 - `Data/processed/`: cleaned datasets
 - `results/`: canonical published outputs
 - `results/generator_uc/full_run_168h/`: canonical raw UC run used for the main results
+- `streamlit_app.py`: lightweight dashboard for generator recommendations and energy-mix review
 - `report/final_report.md`: final written report
 
 ## Main Outputs
@@ -103,6 +104,9 @@ This final structure is designed to map directly to the course rubric:
 - `results/generator_uc_solve_log.csv`
 - `results/horizon_sensitivity_summary.csv`
 - `results/storage_sensitivity_summary.csv`
+- `results/generator_hourly_recommendations.csv`
+- `results/generator_decision_support_summary.csv`
+- `results/generator_supply_mix_hourly.csv`
 - `results/utilization_summary.csv`
 - `results/recommendation_table.csv`
 - `report/final_report.md`
@@ -170,15 +174,17 @@ Expected outputs:
 - `results/storage_sensitivity_summary.csv`
 - `results/robustness_validation_summary.csv`
 
-5. Render the final report:
+5. Build the generator decision-support layer from the precomputed UC outputs:
 
 ```bash
-python scripts/render_report.py
+python scripts/run_decision_support.py
 ```
 
-Expected output:
+Expected outputs:
 
-- `report/final_report.md`
+- `results/generator_hourly_recommendations.csv`
+- `results/generator_decision_support_summary.csv`
+- `results/generator_supply_mix_hourly.csv`
 
 `scripts/run_storage_backtest.py` runs the **main 168-hour generator-level UC**, writes the canonical run under `results/generator_uc/full_run_168h/`, and publishes the main summary outputs to the root `results/` directory.
 
@@ -189,6 +195,22 @@ python -m unittest tests/test_project_outputs.py
 ```
 
 The test suite checks the processed datasets, forecast outputs, UC outputs, sensitivity outputs, and final report.
+
+## Streamlit Dashboard
+
+After running `python scripts/run_decision_support.py`, you can launch the dashboard with:
+
+```bash
+streamlit run streamlit_app.py
+```
+
+The dashboard reads only the precomputed decision-support CSVs. It does not rerun the optimization model.
+
+It includes:
+
+- a stacked hourly energy-mix area chart by source type
+- an hour-by-hour table of which generators should be on
+- generator-level recommendation summaries, including likely role and dispatch behavior
 
 ## Important Assumptions
 
